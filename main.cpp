@@ -5,9 +5,6 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include <windows.h>
-#include <MMsystem.h>
-#include <stdio.h>
 #include <algorithm>
 using namespace std;
 static bool ready_file = true;
@@ -79,10 +76,7 @@ bool getData(string &copy_Name, string & copy_Class, string & copy_Level, bool a
 
 int main()
 {
-    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(h, FOREGROUND_RED);							//changing font color
-    //PlaySound(TEXT("song.wav"), NULL, SND_SYNC | SND_ASYNC);				//background music delete is crashes a program
-    //Menu
+
     while (true)
     {
 
@@ -163,7 +157,6 @@ void load_file() {
                 else
                 {
                     cout << "There is a mistake in a line no " << iterator << endl;
-                    Sleep(1200);
                 }
 
 
@@ -171,7 +164,6 @@ void load_file() {
             else
             {
                 cout << "There is a mistake in a line no " << iterator << endl;
-                Sleep(1200);
             }
         }
 
@@ -181,11 +173,9 @@ void load_file() {
         cout << "Reading from file ";
         for (int x = 0; x<8; x++)
         {
-            Sleep(00);
             cout << ". ";
         }
 
-        Sleep(500);
         system("cls");
 
 
@@ -199,7 +189,7 @@ void load_file() {
     }
     else
     {
-        cout << "No such a file on a HDD!" << endl; Sleep(1500);
+        cout << "No such a file on a HDD!" << endl;
     }
 
 }
@@ -297,7 +287,7 @@ void ExportData()
             plik << wektorek[i].Name << " " << wektorek[i].Class << " " << wektorek[i].Level<<endl;
         }
         plik.close();
-        cout << "Data has been saved successfully\n\n"; Sleep(1000);
+        cout << "Data has been saved successfully\n\n";
     }
 }
 
