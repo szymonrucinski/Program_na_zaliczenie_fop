@@ -80,7 +80,7 @@ int main()
     while (true)
     {
 
-        cout << "--------> THE GLOURIOUS BOOK OF HEROES from RPG World hweroes of American nationality only) <-------- " << endl;
+        cout << "--------> THE GLOURIOUS BOOK OF HEROES from RPG World heroes of American nationality only) <-------- " << endl;
         cout << endl;
 
         cout << "  Put your finger on the PAGE:       " << endl;
